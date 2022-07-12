@@ -11,21 +11,36 @@ export default function Header() {
       </div>
       <div className="fadeIn">
         <div className="flex flex-row gap-12 text-xl justify-end text-[#c5c6c7]">
-          <p className="hover:text-[#66fcf1] hover:border-b-2 hover:border-[#66fcf1]">
+          <a
+            href="/"
+            className="hover:text-[#66fcf1] hover:border-b-2 hover:border-[#66fcf1]"
+          >
             Home
-          </p>
-          <p className="hover:text-[#66fcf1] hover:border-b-2 hover:border-[#66fcf1]">
+          </a>
+          <a
+            href="/"
+            className="hover:text-[#66fcf1] hover:border-b-2 hover:border-[#66fcf1]"
+          >
             About
-          </p>
-          <p className="hover:text-[#66fcf1] hover:border-b-2 hover:border-[#66fcf1]">
+          </a>
+          <a
+            href="/projects"
+            className="hover:text-[#66fcf1] hover:border-b-2 hover:border-[#66fcf1]"
+          >
             Projects
-          </p>
-          <p className="hover:text-[#66fcf1] hover:border-b-2 hover:border-[#66fcf1]">
+          </a>
+          <a
+            href="/"
+            className="hover:text-[#66fcf1] hover:border-b-2 hover:border-[#66fcf1]"
+          >
             Experience
-          </p>
-          <p className="hover:text-[#66fcf1] hover:border-b-2 hover:border-[#66fcf1]">
+          </a>
+          <a
+            href="/"
+            className="hover:text-[#66fcf1] hover:border-b-2 hover:border-[#66fcf1]"
+          >
             Contact
-          </p>
+          </a>
         </div>
       </div>
     </div>

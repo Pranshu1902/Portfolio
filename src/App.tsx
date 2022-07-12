@@ -1,10 +1,8 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Home from "./Components/Home";
+import AppRouter from "./router/AppRouter";
 
 function App() {
-  return <Home />;
+  return <AppRouter />;
 }
 
 export default App;
