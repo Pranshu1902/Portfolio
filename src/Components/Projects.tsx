@@ -132,7 +132,7 @@ export default function Projects() {
         <div className="flex flex-col gap-36">
           {projects.map((project: projectType, index) => {
             const styleClass: string =
-              index % 2 == 0
+              index % 2 === 0
                 ? "flex flex-col lg:flex-row"
                 : "flex flex-col lg:flex-row-reverse";
             return (
@@ -158,7 +158,7 @@ export default function Projects() {
                     <a
                       href={project.githubLink}
                       target={"_blank"}
-                      rel={"relnoreferrer"}
+                      rel={"noreferrer"}
                       className="text-3xl hover:text-[#66fcf1] hover:scale-125 transition duration-500"
                     >
                       <i className="fa fa-github"></i>
@@ -167,7 +167,7 @@ export default function Projects() {
                       <a
                         href={project.link}
                         target={"_blank"}
-                        rel={"relnoreferrer"}
+                        rel={"noreferrer"}
                         className="text-3xl hover:text-[#66fcf1] hover:scale-125 transition duration-500"
                       >
                         <i className="fa fa-external-link"></i>
