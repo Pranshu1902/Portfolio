@@ -33,6 +33,13 @@ export default function Footer() {
             >
               <i className="fa fa-linkedin hover:text-[#64ffda] hover:scale-125 transition duration-200"></i>
             </a>
+            <a
+              href="https://stackoverflow.com/users/15925350/pranshu-aggarwal"
+              target={"_blank"}
+              rel="noreferrer"
+            >
+              <i className="fa fa-stack-overflow hover:text-[#64ffda] hover:scale-125 transition duration-200"></i>
+            </a>
           </div>
         </div>
         <div className="w-full flex justify-center items-center text-xl">
