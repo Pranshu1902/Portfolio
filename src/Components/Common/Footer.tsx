@@ -10,28 +10,28 @@ export default function Footer() {
               target={"_blank"}
               rel="noreferrer"
             >
-              <i className="fa fa-github hover:text-[#64ffda]"></i>
+              <i className="fa fa-github hover:text-[#64ffda] hover:scale-125 transition duration-200"></i>
             </a>
             <a
               href="https://twitter.com/pranshu1902/"
               target={"_blank"}
               rel="noreferrer"
             >
-              <i className="fa fa-twitter hover:text-[#64ffda]"></i>
+              <i className="fa fa-twitter hover:text-[#64ffda] hover:scale-125 transition duration-200"></i>
             </a>
             <a
               href="https://medium.com/@pranshu1902/"
               target={"_blank"}
               rel="noreferrer"
             >
-              <i className="fa fa-medium hover:text-[#64ffda]"></i>
+              <i className="fa fa-medium hover:text-[#64ffda] hover:scale-125 transition duration-200"></i>
             </a>
             <a
               href="https://www.linkedin.com/in/pranshu-aggarwal-4aa8181b4/"
               target={"_blank"}
               rel="noreferrer"
             >
-              <i className="fa fa-linkedin hover:text-[#64ffda]"></i>
+              <i className="fa fa-linkedin hover:text-[#64ffda] hover:scale-125 transition duration-200"></i>
             </a>
           </div>
         </div>
@@ -40,9 +40,9 @@ export default function Footer() {
           Pranshu
         </div>
       </div>
-      <div className="flex justify-end items-center">
+      {/* <div className="flex justify-end items-center">
         <i className="fa fa-copyright"></i>&nbsp; Pranshu 2022
-      </div>
+      </div> */}
     </div>
   );
 }
