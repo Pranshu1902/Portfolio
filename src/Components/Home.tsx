@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Footer from "./Common/Footer";
 import Header from "./Common/Header";
 import computerLogo from "../computer.png";
+import { Link } from "raviger";
 
 export default function Home() {
   useEffect(() => {
@@ -22,21 +23,24 @@ export default function Home() {
             <p className="text-[#64ffda] flex justify-start items-start">
               Hi, I am
             </p>
-            <h1 className="text-[#66fcf1] font-bold text-6xl">
+            <h1 className="text-[#66fcf1] font-bold text-7xl">
               Pranshu Aggarwal
             </h1>
-            <p className="pt-12 w-2/3">
+            <p className="pt-12 w-2/3 text-xl">
               Tech enthusiast and self-taught programmer. Started learning to
               code as a hobby rather than a career focus. Familiar with a
               variety of programming languages including Python, Javascript,
               Typescript, Java, R. <br />
               <p className="text-[#66fcf1]">Sic Parvis Magna!</p>
             </p>
-            <button className="w-1/6 mt-6 transition duration-500 bg-[#66fcf1] hover:bg-[#45a29e] text-black rounded-lg p-2">
-              Know More
-            </button>
+            <Link
+              href="/contact"
+              className="w-1/6 mt-6 flex justify-center items-center font-bold transition duration-500 bg-[#66fcf1] hover:bg-[#45a29e] text-black rounded-lg p-2"
+            >
+              Get in Touch
+            </Link>
           </div>
-          <div className="flex justify-start items-center w-1/2">
+          <div className="flex justify-start items-center w-3/4">
             <img className="bg-transparent" src={computerLogo} alt="" />
           </div>
         </div>

@@ -123,10 +123,10 @@ export default function Projects() {
           <h1 className="text-[#66fcf1] font-bold flex text-8xl">Projects</h1>
         </div>
         <div
-          className="text-3xl flex justify-end"
+          className="text-3xl flex justify-start"
           style={{ paddingBottom: "15%" }}
         >
-          Some of the things I've built
+          Some things I've built
         </div>
         {/* Projects List */}
         <div className="flex flex-col gap-36">

@@ -2,8 +2,52 @@ import { useEffect } from "react";
 import Footer from "./Common/Footer";
 import Header from "./Common/Header";
 import experienceLogo from "../experience.png";
+import { experienceType } from "../Types/DataType";
 
 export default function Experience() {
+  const experiences: experienceType[] = [
+    {
+      name: "VITrendz",
+      description:
+        "Member of a team working on a project to make a lost and found website for VIT students.",
+      position: "Front-End Developer",
+      image: "",
+      tech: ["React", "JavaScript", "NodeJS", "Tailwind"],
+      startDate: "Jun 2022",
+      endDate: "Present",
+    },
+    {
+      name: "GDC Internship",
+      description:
+        "Interning with Coronasafe and Pupilfirst in collaboration with AICTE.",
+      position: "Full Stack Developer",
+      image: "",
+      tech: ["React", "Django", "Typescript", "Tailwind"],
+      startDate: "May 2022",
+      endDate: "Present",
+    },
+    {
+      name: "Biosphere Club, VIT",
+      description:
+        "Member of the website team of a club raising awareness regarding climate change and its impact.",
+      position: "Full Stack Developer",
+      image: "",
+      tech: ["Javascript", "Tailwind"],
+      startDate: "Feb 2022",
+      endDate: "Present",
+    },
+    {
+      name: "GDC Fellowship",
+      description:
+        "One of the 40 out of 48k applicant students selected for GDC fellowship with AICTE for a training + internship programme.",
+      position: "Full Stack Developer",
+      image: "",
+      tech: ["React", "Django", "Typescript", "Tailwind"],
+      startDate: "Jan 2022",
+      endDate: "May 2022",
+    },
+  ];
+
   useEffect(() => {
     document.title = "Experience | Pranshu Aggarwal";
   }, []);
@@ -27,10 +71,57 @@ export default function Experience() {
         </div>
 
         {/* Experiene */}
-        <div
-          className="flex justify-center items-center w-full"
-          style={{ borderLeft: "6px solid #66fcf1", height: "500px" }}
-        ></div>
+        <div className="h-full w-full flex justify-center items-center">
+          <div className="flex flex-col gap-24 w-screen">
+            {experiences.map((experience: experienceType, index) => {
+              if (index % 2 === 0) {
+                return (
+                  <div className="left-0 flex flex-row gap-4 justify-start items-center">
+                    <div className="flex flex-col w-2/5 gap-4 bg-[#112240] rounded-lg p-3 shadow-lg">
+                      <p className="text-2xl font-bold text-[#66fcf1]">
+                        {experience.name}
+                      </p>
+                      <p>{experience.description}</p>
+                      <p className="flex flex-row gap-4 font-bold">
+                        {experience.tech.map((tech: string) => {
+                          return <p>{tech}</p>;
+                        })}
+                      </p>
+                      <p>
+                        {experience.startDate} - {experience.endDate}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="p-2 bg-[#66fcf1] rounded-full"></p>
+                    </div>
+                  </div>
+                );
+              } else {
+                return (
+                  <div className="right-0 flex flex-row gap-4 justify-end items-center">
+                    <div>
+                      <p className="p-2 bg-[#66fcf1] rounded-full"></p>
+                    </div>
+                    <div className="flex flex-col w-2/5 gap-4 bg-[#112240] rounded-lg p-3 shadow-lg">
+                      <p className="text-2xl font-bold text-[#66fcf1]">
+                        {experience.name}
+                      </p>
+                      <p>{experience.description}</p>
+                      <p className="flex flex-row gap-4 font-bold">
+                        {experience.tech.map((tech: string) => {
+                          return <p>{tech}</p>;
+                        })}
+                      </p>
+                      <p>
+                        {experience.startDate} - {experience.endDate}
+                      </p>
+                    </div>
+                  </div>
+                );
+              }
+            })}
+          </div>
+        </div>
 
         {/* Footer */}
         <div className="w-full absolute inset-x-0 bottom-0">

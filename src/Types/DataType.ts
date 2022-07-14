@@ -11,3 +11,13 @@ export type projectType = {
   link?: string;
   tech: techType[];
 };
+
+export type experienceType = {
+  name: string;
+  description: string;
+  position: string;
+  image?: any;
+  tech: string[];
+  startDate?: string;
+  endDate?: string;
+};
