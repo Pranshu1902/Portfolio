@@ -28,7 +28,7 @@ export default function About() {
             <div className="flex flex-col gap-4 w-1/2 justify-center">
               <div className="pt-6">
                 <p>
-                  Hello, I'm Pranshu, a sophmore CS undergrad at VIT, Chennai.
+                  Hello, I'm Pranshu, a sophomore CS undergrad at VIT, Chennai.
                 </p>
               </div>
               <div>

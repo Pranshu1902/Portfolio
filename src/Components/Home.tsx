@@ -52,7 +52,7 @@ export default function Home() {
             <hr />
             <div className="pt-6">
               <p>
-                Hello, I'm Pranshu, a sophmore CS undergrad at VIT, Chennai.
+                Hello, I'm Pranshu, a sophomore CS undergrad at VIT, Chennai.
               </p>
             </div>
             <div>
