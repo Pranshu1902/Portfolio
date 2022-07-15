@@ -4,7 +4,7 @@ import Header from "./Common/Header";
 
 export default function About() {
   useEffect(() => {
-    document.title = "Experience | Pranshu Aggarwal";
+    document.title = "About | Pranshu Aggarwal";
   }, []);
 
   return (

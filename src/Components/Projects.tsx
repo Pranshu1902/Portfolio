@@ -138,7 +138,7 @@ export default function Projects() {
             return (
               <div className={styleClass + " gap-12"}>
                 {/* Image */}
-                <div className="w-full lg:w-1/2">
+                <div className="w-full lg:w-1/2 shadow-lg">
                   <img className="rounded-lg" src={project.image} alt="" />
                 </div>
                 {/* Text */}
@@ -146,10 +146,10 @@ export default function Projects() {
                   <p className="text-4xl text-[#66fcf1] font-bold pb-4">
                     {project.name}
                   </p>
-                  <p className="text-xl pb-4 bg-[#112240] rounded-lg p-4">
+                  <p className="text-xl pb-4 bg-[#112240] rounded-lg p-4 shadow-lg">
                     {project.description}
                   </p>
-                  <p className="flex gap-4 pb-4">
+                  <p className="flex gap-4 pb-4 text-xl">
                     {project.tech.map((tech) => (
                       <div className="font-bold">{tech.name}</div>
                     ))}
