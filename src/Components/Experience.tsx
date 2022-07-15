@@ -72,7 +72,8 @@ export default function Experience() {
 
         {/* Experiene */}
         <div className="h-full w-full flex justify-center items-center">
-          <div className="flex flex-col gap-24 w-screen">
+          <div className="bg-[#66fcf1] h-screen w-2 flex justify-center items-center absolute"></div>
+          <div className="flex flex-col gap-12 w-screen">
             {experiences.map((experience: experienceType, index) => {
               if (index % 2 === 0) {
                 return (
