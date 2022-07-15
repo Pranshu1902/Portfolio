@@ -14,7 +14,7 @@ export default function About() {
 
       <div className="pt-6 p-36 flex flex-col gap-4 justify-start">
         {/* Intro */}
-        <div className="flex flex-row gap-6 p-12 w-full items-center">
+        <div className="flex flex-row gap-6 pt-12 pb-12 w-full items-center">
           <div className="flex justify-center items-center text-6xl text-[#66fcf1]">
             <i className="fa fa-info-circle"></i>
           </div>
@@ -23,8 +23,8 @@ export default function About() {
           </div>
         </div>
 
-        <div>
-          <div className="flex flex-row justify-center items-center gap-4 w-full">
+        <div className="pl-12">
+          <div className="flex flex-row justify-center items-center gap-4 w-full text-xl">
             <div className="flex flex-col gap-4 w-1/2 justify-center">
               <div className="pt-6">
                 <p>

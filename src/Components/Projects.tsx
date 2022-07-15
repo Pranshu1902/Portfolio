@@ -123,7 +123,7 @@ export default function Projects() {
           <h1 className="text-[#66fcf1] font-bold flex text-8xl">Projects</h1>
         </div>
         <div
-          className="text-3xl flex justify-start"
+          className="text-3xl flex justify-start pl-12"
           style={{ paddingBottom: "15%" }}
         >
           Some things I've built

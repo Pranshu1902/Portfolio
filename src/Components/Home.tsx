@@ -29,9 +29,9 @@ export default function Home() {
             <p className="pt-12 w-2/3 text-xl">
               Tech enthusiast and self-taught programmer. Started learning to
               code as a hobby rather than a career focus. Familiar with a
-              variety of programming languages including Python, Javascript,
-              Typescript, Java, R. <br />
-              <p className="text-[#66fcf1]">Sic Parvis Magna!</p>
+              variety of technology including Django, React, Python, Javascript,
+              Typescript, Java, etc. <br />
+              <p className="text-[#66fcf1] pt-2 text-2xl">Sic Parvis Magna</p>
             </p>
             <Link
               href="/contact"
@@ -47,7 +47,7 @@ export default function Home() {
 
         {/* About me */}
         <div className="flex flex-row-reverse justify-center items-center gap-4 w-full">
-          <div className="flex flex-col gap-4 w-1/2 justify-center">
+          <div className="flex flex-col gap-4 w-1/2 justify-center text-xl">
             <h1 className="text-3xl font-bold text-[#ccd6f6]">About Me</h1>
             <hr />
             <div className="pt-6">
