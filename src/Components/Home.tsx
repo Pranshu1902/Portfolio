@@ -3,8 +3,29 @@ import Footer from "./Common/Footer";
 import Header from "./Common/Header";
 import computerLogo from "../computer.png";
 import { Link } from "raviger";
+import React from "../Images/tech/React.png";
+import Django from "../Images/tech/django.png";
+import Typescript from "../Images/tech/typescript.svg";
+import Tailwind from "../Images/tech/tailwindcss.svg";
+import JavaScript from "../Images/tech/js.png";
+import Python from "../Images/tech/python.png";
+import Git from "../Images/tech/git.png";
+import Github from "../Images/tech/github1.svg";
+import VSCode from "../Images/tech/vsc.svg";
 
 export default function Home() {
+  const technologies = [
+    { name: "React", img: React },
+    { name: "Django", img: Django },
+    { name: "Tailwind", img: Tailwind },
+    { name: "TypeScript", img: Typescript },
+    { name: "JavaScript", img: JavaScript },
+    { name: "Python", img: Python },
+    { name: "Github", img: Github },
+    { name: "Git", img: Git },
+    { name: "VSCode", img: VSCode },
+  ];
+
   useEffect(() => {
     document.title = "Pranshu Aggarwal";
   }, []);
@@ -81,12 +102,6 @@ export default function Home() {
                 &nbsp; as a full-stack web developer.
               </p>
             </div>
-            <div className="flex flex-col gap-2">
-              <p>Technologies I have worked with:</p>
-              <div>
-                <span className="fa fa-react"></span>
-              </div>
-            </div>
           </div>
           <div className="w-1/2 flex justify-center items-center">
             <img
@@ -95,6 +110,21 @@ export default function Home() {
               width={"40%"}
               className="rounded-full border-2 border-[#64ffda] p-3"
             />
+          </div>
+        </div>
+
+        {/* Technologies */}
+        <div className="flex flex-col gap-2 justify-center items-center pt-36">
+          <p className="text-3xl text-[#ccd6f6] font-bold">
+            Technologies I have worked with:
+          </p>
+          <div className="flex flex-row gap-8 p-6">
+            {technologies.map((tech) => (
+              <div className="flex flex-row gap-4 justify-center items-center">
+                <img src={tech.img} width={50} height={40} alt="" />
+                <p>{tech.name}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
