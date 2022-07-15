@@ -38,7 +38,7 @@ export default function Header() {
             Experience
           </Link>
           <Link
-            href="/"
+            href="/contact"
             className="hover:text-[#66fcf1] hover:border-b-2 hover:border-[#66fcf1] transition duration-500"
           >
             Contact
