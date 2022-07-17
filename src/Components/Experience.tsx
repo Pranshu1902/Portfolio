@@ -64,13 +64,10 @@ export default function Experience() {
     <div className="absolute bg-gradient-to-br from-[#0a192f] via-[#0a192f] to-[#112240] text-[#c5c6c7] w-full min-h-screen">
       {/* Header */}
       <Header filters={filters} />
-      <div
-        className="p-4 md:p-24 flex flex-col gap-4 justify-start"
-        // style={{ paddingLeft: "20%" }}
-      >
+      <div className="p-4 md:p-24 flex flex-col gap-4 justify-start">
         {/* Intro */}
         <div className="flex flex-row gap-2 md:p-12 w-full items-center">
-          <div className="flex justify-center items-center w-1/5">
+          <div className="flex justify-center items-center w-1/3 md:w-1/5">
             <img className="bg-transparent" src={experienceLogo} alt="" />
           </div>
           <div className="flex flex-col gap-4 justify-center items-center">
