@@ -13,6 +13,7 @@ import Git from "../Images/tech/git.png";
 import Github from "../Images/tech/github1.svg";
 import VSCode from "../Images/tech/vsc.svg";
 import Ubuntu from "../Images/tech/ubuntu.png";
+import npm from "../Images/tech/npm.png";
 import { linkType } from "../Types/DataType";
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
     { name: "Git", img: Git },
     { name: "VSCode", img: VSCode },
     { name: "Ubuntu", img: Ubuntu },
+    { name: "npm", img: npm },
   ];
 
   const filters: linkType[] = [
