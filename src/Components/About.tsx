@@ -1,8 +1,17 @@
 import { useEffect } from "react";
+import { linkType } from "../Types/DataType";
 import Footer from "./Common/Footer";
 import Header from "./Common/Header";
 
 export default function About() {
+  const filters: linkType[] = [
+    { title: "Home", active: false, link: "/" },
+    { title: "About", active: true, link: "/about" },
+    { title: "Projects", active: false, link: "/projects" },
+    { title: "Experience", active: false, link: "/experience" },
+    { title: "Contact", active: false, link: "/contact" },
+  ];
+
   useEffect(() => {
     document.title = "About | Pranshu Aggarwal";
   }, []);
@@ -10,22 +19,19 @@ export default function About() {
   return (
     <div className="absolute bg-gradient-to-br from-[#0a192f] via-[#0a192f] to-[#112240] text-[#c5c6c7] w-full min-h-screen">
       {/* Header */}
-      <Header />
+      <Header filters={filters} />
 
-      <div className="pt-6 p-36 flex flex-col gap-4 justify-start">
+      <div className="p-4 md:p-24 flex flex-col gap-4 justify-start">
         {/* Intro */}
-        <div className="flex flex-row gap-6 pt-12 pb-12 w-full items-center">
-          <div className="flex justify-center items-center text-6xl text-[#66fcf1]">
-            <i className="fa fa-info-circle"></i>
-          </div>
+        <div className="flex flex-row gap-6 pb-12 w-full items-center">
           <div className="flex flex-col gap-4 justify-center items-center">
             <h1 className="text-[#66fcf1] font-bold text-6xl">About</h1>
           </div>
         </div>
 
-        <div className="pl-12">
-          <div className="flex flex-row justify-center items-center gap-4 w-full text-xl">
-            <div className="flex flex-col gap-4 w-1/2 justify-center">
+        <div className="pl-12 h-full pb-24">
+          <div className="flex flex-col-reverse md:flex-row-reverse justify-center items-center gap-4 w-full h-full">
+            <div className="flex flex-col gap-4 md:w-1/2 justify-center text-xl">
               <div className="pt-6">
                 <p>
                   Hello, I'm Pranshu, a sophomore CS undergrad at VIT, Chennai.
@@ -57,19 +63,13 @@ export default function About() {
                   &nbsp; as a full-stack web developer.
                 </p>
               </div>
-              <div className="flex flex-col gap-2">
-                <p>Technologies I have worked with:</p>
-                <div>
-                  <span className="fa fa-react"></span>
-                </div>
-              </div>
             </div>
-            <div className="w-1/2 flex justify-center items-center">
+            <div className="md:w-1/2 flex justify-center items-center">
               <img
                 src="https://avatars.githubusercontent.com/u/70687348?v=4"
                 alt="profile"
                 width={"40%"}
-                className="rounded-full border-2 border-[#64ffda] p-3"
+                className="rounded-full border-2 border-[#64ffda] md:p-3"
               />
             </div>
           </div>

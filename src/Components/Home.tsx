@@ -12,6 +12,8 @@ import Python from "../Images/tech/python.png";
 import Git from "../Images/tech/git.png";
 import Github from "../Images/tech/github1.svg";
 import VSCode from "../Images/tech/vsc.svg";
+import Ubuntu from "../Images/tech/ubuntu.png";
+import { linkType } from "../Types/DataType";
 
 export default function Home() {
   const technologies = [
@@ -24,6 +26,15 @@ export default function Home() {
     { name: "Github", img: Github },
     { name: "Git", img: Git },
     { name: "VSCode", img: VSCode },
+    { name: "Ubuntu", img: Ubuntu },
+  ];
+
+  const filters: linkType[] = [
+    { title: "Home", active: true, link: "/" },
+    { title: "About", active: false, link: "/about" },
+    { title: "Projects", active: false, link: "/projects" },
+    { title: "Experience", active: false, link: "/experience" },
+    { title: "Contact", active: false, link: "/contact" },
   ];
 
   useEffect(() => {
@@ -33,21 +44,18 @@ export default function Home() {
   return (
     <div className="absolute bg-gradient-to-br from-[#0a192f] via-[#0a192f] to-[#112240] text-[#c5c6c7] w-full min-h-screen">
       {/* Header */}
-      <Header />
-      <div
-        className="pt-6 p-36 flex flex-col gap-4 justify-center w-full"
-        // style={{ paddingLeft: "20%" }}
-      >
+      <Header filters={filters} />
+      <div className="pt-6 pb-24 p-4 md:p-24 flex flex-col gap-4 justify-center items-center w-full">
         {/* Intro */}
-        <div className="flex flex-row gap-4 pb-48 p-12 justify-center">
-          <div className="flex flex-col gap-4 pt-12 justify-start items-start">
+        <div className="flex flex-col-reverse md:flex-row gap-4 pb-48 justify-center items-center">
+          <div className="flex flex-col gap-4 justify-start items-start">
             <p className="text-[#64ffda] flex justify-start items-start">
               Hi, I am
             </p>
             <h1 className="text-[#66fcf1] font-bold text-7xl">
               Pranshu Aggarwal
             </h1>
-            <p className="pt-12 w-2/3 text-xl">
+            <p className="pt-12 w-full md:w-2/3 text-xl">
               Tech enthusiast and self-taught programmer. Started learning to
               code as a hobby rather than a career focus. Familiar with a
               variety of technology including Django, React, Python, Javascript,
@@ -56,19 +64,19 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="w-1/6 mt-6 flex justify-center items-center font-bold transition duration-500 bg-[#66fcf1] hover:bg-[#45a29e] text-black rounded-lg p-2"
+              className="md:w-1/6 mt-6 flex justify-center items-center font-bold transition duration-500 bg-[#66fcf1] hover:bg-[#45a29e] text-black rounded-lg p-2"
             >
               Get in Touch
             </Link>
           </div>
-          <div className="flex justify-start items-center w-3/4">
+          <div className="flex justify-center items-center w-3/4">
             <img className="bg-transparent" src={computerLogo} alt="" />
           </div>
         </div>
 
         {/* About me */}
-        <div className="flex flex-row-reverse justify-center items-center gap-4 w-full">
-          <div className="flex flex-col gap-4 w-1/2 justify-center text-xl">
+        <div className="flex flex-col md:flex-row-reverse justify-center items-center gap-4 w-full">
+          <div className="flex flex-col gap-4 md:w-1/2 justify-center text-xl">
             <h1 className="text-3xl font-bold text-[#ccd6f6]">About Me</h1>
             <hr />
             <div className="pt-6">
@@ -103,12 +111,12 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="w-1/2 flex justify-center items-center">
+          <div className="md:w-1/2 flex justify-center items-center">
             <img
               src="https://avatars.githubusercontent.com/u/70687348?v=4"
               alt="profile"
               width={"40%"}
-              className="rounded-full border-2 border-[#64ffda] p-3"
+              className="rounded-full border-2 border-[#64ffda] md:p-3"
             />
           </div>
         </div>
@@ -118,7 +126,7 @@ export default function Home() {
           <p className="text-3xl text-[#ccd6f6] font-bold">
             Technologies I have worked with:
           </p>
-          <div className="flex flex-row gap-8 p-6">
+          <div className="flex flex-wrap md:flex-row gap-8 p-6">
             {technologies.map((tech) => (
               <div className="flex flex-row gap-4 justify-center items-center">
                 <img src={tech.img} width={50} height={40} alt="" />

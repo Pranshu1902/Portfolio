@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Footer from "./Common/Footer";
 import Header from "./Common/Header";
 import codeLogo from "../code.png";
-import { projectType } from "../Types/DataType";
+import { linkType, projectType } from "../Types/DataType";
 
 // Import project images
 import MoneyManager from "../Images/projects/money_manager.png";
@@ -103,14 +103,22 @@ export default function Projects() {
     },
   ];
 
+  const filters: linkType[] = [
+    { title: "Home", active: false, link: "/" },
+    { title: "About", active: false, link: "/about" },
+    { title: "Projects", active: true, link: "/projects" },
+    { title: "Experience", active: false, link: "/experience" },
+    { title: "Contact", active: false, link: "/contact" },
+  ];
+
   useEffect(() => {
     document.title = "Projects | Pranshu Aggarwal";
   }, []);
 
   return (
     <div className="absolute bg-gradient-to-br from-[#0a192f] via-[#0a192f] to-[#112240] text-[#c5c6c7] w-full min-h-screen">
-      <Header />
-      <div className="w-full pt-6 p-36 flex flex-col gap-4">
+      <Header filters={filters} />
+      <div className="w-full p-4 pb-24 md:p-24 flex flex-col gap-4">
         <div
           style={{ paddingBottom: "3%" }}
           className="flex flex-row pt-6 justify-start items-center"
@@ -120,7 +128,9 @@ export default function Projects() {
             alt="code logo"
             className="bg-transparent w-1/6 flex"
           />
-          <h1 className="text-[#66fcf1] font-bold flex text-8xl">Projects</h1>
+          <h1 className="text-[#66fcf1] font-bold flex text-6xl md:text-8xl">
+            Projects
+          </h1>
         </div>
         <div
           className="text-3xl flex justify-start pl-12"
@@ -142,14 +152,14 @@ export default function Projects() {
                   <img className="rounded-lg" src={project.image} alt="" />
                 </div>
                 {/* Text */}
-                <div className="flex flex-col justify-center h-full w-1/2">
+                <div className="flex flex-col justify-center h-full w-full md:w-1/2">
                   <p className="text-4xl text-[#66fcf1] font-bold pb-4">
                     {project.name}
                   </p>
                   <p className="text-xl pb-4 bg-[#112240] rounded-lg p-4 shadow-lg">
                     {project.description}
                   </p>
-                  <p className="flex gap-4 pb-4 text-xl">
+                  <p className="flex flex-wrap gap-4 pb-4 text-xl">
                     {project.tech.map((tech) => (
                       <div className="font-bold">{tech.name}</div>
                     ))}

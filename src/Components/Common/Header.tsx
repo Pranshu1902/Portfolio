@@ -1,6 +1,8 @@
 import { Link } from "raviger";
+import { linkType } from "../../Types/DataType";
+import DropDown from "./DropDown";
 
-export default function Header() {
+export default function Header(props: { filters: linkType[] }) {
   return (
     <div className="p-6 flex justify-between">
       <div>
@@ -11,7 +13,8 @@ export default function Header() {
           P
         </p>
       </div>
-      <div className="fadeIn">
+      {/* Desktop View */}
+      <div className="hidden md:block fadeIn">
         <div className="flex flex-row gap-12 text-xl justify-end text-[#c5c6c7]">
           <Link
             href="/"
@@ -44,6 +47,10 @@ export default function Header() {
             Contact
           </Link>
         </div>
+      </div>
+      {/* Mobile view */}
+      <div className="md:hidden flex flex-row-reverse gap-24 justify-start">
+        <DropDown filters={props.filters} />
       </div>
     </div>
   );

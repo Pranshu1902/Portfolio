@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Footer from "./Common/Footer";
 import Header from "./Common/Header";
 import experienceLogo from "../experience.png";
-import { experienceType } from "../Types/DataType";
+import { experienceType, linkType } from "../Types/DataType";
 
 export default function Experience() {
   const experiences: experienceType[] = [
@@ -48,6 +48,14 @@ export default function Experience() {
     },
   ];
 
+  const filters: linkType[] = [
+    { title: "Home", active: false, link: "/" },
+    { title: "About", active: false, link: "/about" },
+    { title: "Projects", active: false, link: "/projects" },
+    { title: "Experience", active: true, link: "/experience" },
+    { title: "Contact", active: false, link: "/contact" },
+  ];
+
   useEffect(() => {
     document.title = "Experience | Pranshu Aggarwal";
   }, []);
@@ -55,30 +63,31 @@ export default function Experience() {
   return (
     <div className="absolute bg-gradient-to-br from-[#0a192f] via-[#0a192f] to-[#112240] text-[#c5c6c7] w-full min-h-screen">
       {/* Header */}
-      <Header />
+      <Header filters={filters} />
       <div
-        className="pt-6 p-36 flex flex-col gap-4 justify-start"
+        className="p-4 md:p-24 flex flex-col gap-4 justify-start"
         // style={{ paddingLeft: "20%" }}
       >
         {/* Intro */}
-        <div className="flex flex-row gap-6 p-12 w-full items-center">
+        <div className="flex flex-row gap-2 md:p-12 w-full items-center">
           <div className="flex justify-center items-center w-1/5">
             <img className="bg-transparent" src={experienceLogo} alt="" />
           </div>
           <div className="flex flex-col gap-4 justify-center items-center">
-            <h1 className="text-[#66fcf1] font-bold text-6xl">Experience</h1>
+            <h1 className="text-[#66fcf1] font-bold text-5xl md:text-6xl">
+              Experience
+            </h1>
           </div>
         </div>
 
         {/* Experiene */}
-        <div className="h-full w-full flex justify-center items-center">
-          <div className="bg-[#66fcf1] h-screen w-2 flex justify-center items-center absolute"></div>
+        <div className="h-full w-full flex justify-center items-center pb-24">
           <div className="flex flex-col gap-12 w-screen">
             {experiences.map((experience: experienceType, index) => {
               if (index % 2 === 0) {
                 return (
                   <div className="left-0 flex flex-row gap-4 justify-start items-center">
-                    <div className="flex flex-col w-2/5 gap-4 bg-[#112240] rounded-lg p-3 shadow-lg">
+                    <div className="flex flex-col md:w-2/5 gap-4 bg-[#112240] rounded-lg p-3 shadow-lg">
                       <p className="text-2xl font-bold text-[#66fcf1]">
                         {experience.name}
                       </p>
@@ -103,12 +112,12 @@ export default function Experience() {
                     <div>
                       <p className="p-2 bg-[#66fcf1] rounded-full"></p>
                     </div>
-                    <div className="flex flex-col w-2/5 gap-4 bg-[#112240] rounded-lg p-3 shadow-lg">
+                    <div className="flex flex-col md:w-2/5 gap-4 bg-[#112240] rounded-lg p-3 shadow-lg">
                       <p className="text-2xl font-bold text-[#66fcf1]">
                         {experience.name}
                       </p>
                       <p>{experience.description}</p>
-                      <p className="flex flex-row gap-4 font-bold">
+                      <p className="flex flex-row flex-wrap gap-4 font-bold">
                         {experience.tech.map((tech: string) => {
                           return <p>{tech}</p>;
                         })}
