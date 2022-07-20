@@ -62,7 +62,7 @@ export default function Projects() {
       name: "Martial Arts Simulator",
       description:
         "This is an online game where I have simulted a martial artist with some commands like kick, punch, block, etc.",
-      link: "/Martial%20arts/index.html",
+      link: "https://pranshu1902.github.io/Martial%20arts/index.html",
       githubLink:
         "https://github.com/Pranshu1902/pranshu1902.github.io/tree/master/Martial arts",
       image: MartialArts,
