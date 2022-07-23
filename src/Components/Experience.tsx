@@ -3,25 +3,29 @@ import Footer from "./Common/Footer";
 import Header from "./Common/Header";
 import experienceLogo from "../experience.png";
 import { experienceType, linkType } from "../Types/DataType";
+import Android from "../Images/experience/android.png";
+import Gdc from "../Images/experience/gdc.png";
+import Vitrendz from "../Images/experience/vitrendz.png";
+import Biosphere from "../Images/experience/biosphere.png";
 
 export default function Experience() {
   const experiences: experienceType[] = [
     {
       name: "Android Club",
+      image: Android,
       description:
         "Member of a team working to create great websites and android apps.",
       position: "Member of Tech Team",
-      image: "",
       tech: ["React", "React Native", "JavaScript", "NodeJS", "Tailwind"],
       startDate: "Jul 2022",
       endDate: "Present",
     },
     {
       name: "VITrendz",
+      image: Vitrendz,
       description:
         "Member of a team working on a project to make a lost and found website for VIT students.",
       position: "Front-End Developer",
-      image: "",
       tech: ["React", "JavaScript", "NodeJS", "Tailwind"],
       startDate: "Jun 2022",
       endDate: "Present",
@@ -31,7 +35,7 @@ export default function Experience() {
       description:
         "Interning with Coronasafe and Pupilfirst in collaboration with AICTE.",
       position: "Full Stack Developer",
-      image: "",
+      image: Gdc,
       tech: ["React", "Django", "Typescript", "Tailwind"],
       startDate: "May 2022",
       endDate: "Present",
@@ -41,7 +45,7 @@ export default function Experience() {
       description:
         "Member of the website team of a club raising awareness regarding climate change and its impact.",
       position: "Full Stack Developer",
-      image: "",
+      image: Biosphere,
       tech: ["Javascript", "Tailwind"],
       startDate: "Feb 2022",
       endDate: "Present",
@@ -51,7 +55,7 @@ export default function Experience() {
       description:
         "One of the 40 out of 48k applicant students selected for GDC fellowship with AICTE for a training + internship programme.",
       position: "Full Stack Developer",
-      image: "",
+      image: Gdc,
       tech: ["React", "Django", "Typescript", "Tailwind"],
       startDate: "Jan 2022",
       endDate: "May 2022",
@@ -94,19 +98,28 @@ export default function Experience() {
               if (index % 2 === 0) {
                 return (
                   <div className="left-0 flex flex-row gap-4 justify-start items-center">
-                    <div className="flex flex-col md:w-2/5 gap-4 bg-[#112240] rounded-lg p-3 shadow-lg">
-                      <p className="text-2xl font-bold text-[#66fcf1]">
-                        {experience.name}
-                      </p>
-                      <p>{experience.description}</p>
-                      <p className="flex flex-row gap-4 font-bold">
-                        {experience.tech.map((tech: string) => {
-                          return <p>{tech}</p>;
-                        })}
-                      </p>
-                      <p>
-                        {experience.startDate} - {experience.endDate}
-                      </p>
+                    <div className="flex flex-col md:flex-row md:w-2/5 gap-4 bg-[#112240] rounded-lg p-3 shadow-lg">
+                      <div className="flex justify-center items-center w-1/4">
+                        <img
+                          src={experience.image}
+                          alt={experience.name + " logo"}
+                          className="rounded-full w-5/6"
+                        />
+                      </div>
+                      <div className="flex flex-col md:w-3/4">
+                        <p className="text-2xl font-bold text-[#66fcf1]">
+                          {experience.name}
+                        </p>
+                        <p>{experience.description}</p>
+                        <p className="flex flex-row flex-wrap gap-2 font-bold">
+                          {experience.tech.map((tech: string) => {
+                            return <p className="truncate">{tech}</p>;
+                          })}
+                        </p>
+                        <p className="pt-4">
+                          {experience.startDate} - {experience.endDate}
+                        </p>
+                      </div>
                     </div>
                     <div>
                       <p className="p-2 bg-[#66fcf1] rounded-full"></p>
@@ -119,19 +132,28 @@ export default function Experience() {
                     <div>
                       <p className="p-2 bg-[#66fcf1] rounded-full"></p>
                     </div>
-                    <div className="flex flex-col md:w-2/5 gap-4 bg-[#112240] rounded-lg p-3 shadow-lg">
-                      <p className="text-2xl font-bold text-[#66fcf1]">
-                        {experience.name}
-                      </p>
-                      <p>{experience.description}</p>
-                      <p className="flex flex-row flex-wrap gap-4 font-bold">
-                        {experience.tech.map((tech: string) => {
-                          return <p>{tech}</p>;
-                        })}
-                      </p>
-                      <p>
-                        {experience.startDate} - {experience.endDate}
-                      </p>
+                    <div className="flex flex-col md:flex-row md:w-2/5 gap-4 bg-[#112240] rounded-lg p-3 shadow-lg">
+                      <div className="flex justify-center items-center w-1/4">
+                        <img
+                          src={experience.image}
+                          alt={experience.name}
+                          className="rounded-full w-5/6"
+                        />
+                      </div>
+                      <div className="flex flex-col md:w-3/4">
+                        <p className="text-2xl font-bold text-[#66fcf1]">
+                          {experience.name + " logo"}
+                        </p>
+                        <p>{experience.description}</p>
+                        <p className="flex flex-row flex-wrap gap-2 font-bold">
+                          {experience.tech.map((tech: string) => {
+                            return <p className="truncate">{tech}</p>;
+                          })}
+                        </p>
+                        <p className="pt-4">
+                          {experience.startDate} - {experience.endDate}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 );
