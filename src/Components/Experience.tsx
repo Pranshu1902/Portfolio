@@ -7,6 +7,16 @@ import { experienceType, linkType } from "../Types/DataType";
 export default function Experience() {
   const experiences: experienceType[] = [
     {
+      name: "Android Club",
+      description:
+        "Member of a team working to create great websites and android apps.",
+      position: "Member of Tech Team",
+      image: "",
+      tech: ["React", "React Native", "JavaScript", "NodeJS", "Tailwind"],
+      startDate: "Jul 2022",
+      endDate: "Present",
+    },
+    {
       name: "VITrendz",
       description:
         "Member of a team working on a project to make a lost and found website for VIT students.",
