@@ -136,13 +136,13 @@ export default function Experience() {
                       <div className="flex justify-center items-center w-1/4">
                         <img
                           src={experience.image}
-                          alt={experience.name}
+                          alt={experience.name + " logo"}
                           className="rounded-full w-5/6"
                         />
                       </div>
                       <div className="flex flex-col md:w-3/4">
                         <p className="text-2xl font-bold text-[#66fcf1]">
-                          {experience.name + " logo"}
+                          {experience.name}
                         </p>
                         <p>{experience.description}</p>
                         <p className="flex flex-row flex-wrap gap-2 font-bold">
