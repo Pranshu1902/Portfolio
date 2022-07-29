@@ -5,6 +5,7 @@ import codeLogo from "../code.png";
 import { linkType, projectType } from "../Types/DataType";
 
 // Import project images
+import BooksWorld from "../Images/projects/books_world.png";
 import MoneyManager from "../Images/projects/money_manager.png";
 import PChat from "../Images/projects/p_chat.png";
 import TheGladdenProject from "../Images/projects/gladdenproject.png";
@@ -17,6 +18,20 @@ import Atm from "../Images/projects/atm.png";
 
 export default function Projects() {
   const projects: projectType[] = [
+    {
+      name: "Books World",
+      description:
+        "One place to manage all the books you ever read. Get detailed analysis on the book you read, all comments on your books to track your records.",
+      link: "https://books-world-pranshu1902.netlify.app/",
+      githubLink: "https://github.com/Pranshu1902/Books-World-fe/",
+      image: BooksWorld,
+      tech: [
+        { name: "React" },
+        { name: "Django" },
+        { name: "Typescript" },
+        { name: "Tailwind" },
+      ],
+    },
     {
       name: "Money Manager",
       description:
