@@ -5,6 +5,7 @@ import computerLogo from "../computer.png";
 import { Link } from "raviger";
 import React from "../Images/tech/React.png";
 import Django from "../Images/tech/django.png";
+import Nodejs from "../Images/tech/nodejs.png";
 import Typescript from "../Images/tech/typescript.svg";
 import Tailwind from "../Images/tech/tailwindcss.svg";
 import JavaScript from "../Images/tech/js.png";
@@ -20,6 +21,7 @@ export default function Home() {
   const technologies = [
     { name: "React", img: React },
     { name: "Django", img: Django },
+    { name: "NodeJs", img: Nodejs },
     { name: "Tailwind", img: Tailwind },
     { name: "TypeScript", img: Typescript },
     { name: "JavaScript", img: JavaScript },
