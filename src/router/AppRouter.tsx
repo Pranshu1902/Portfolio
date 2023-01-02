@@ -5,6 +5,7 @@ import Blogs from "../Components/Blogs";
 import Experience from "../Components/Experience";
 import Home from "../Components/Home";
 import Projects from "../Components/Projects";
+import Portfolio from "../Components/Portfolio";
 
 const routes = {
   "/": () => <Home />,
@@ -12,6 +13,7 @@ const routes = {
   "/blogs": () => <Blogs />,
   "/projects": () => <Projects />,
   "/experience": () => <Experience />,
+  "/portfolio": () => <Portfolio />,
 };
 
 export default function AppRouter() {
