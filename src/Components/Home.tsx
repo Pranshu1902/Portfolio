@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import profile from "../Images/profile.jpg";
 import Footer from "./Common/Footer";
 import Header from "./Common/Header";
