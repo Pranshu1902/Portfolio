@@ -19,7 +19,7 @@ export default function Header(props: { filters: linkType[] }) {
   };
 
   return (
-    <div className="p-6 flex justify-between">
+    <div className="p-6 flex justify-between bg-[#0a192f] shadow border-b-2 border-[#01d293] fixed w-full z-10 mb-12">
       <div>
         <p
           style={{ height: "50px", width: "50px", fontSize: "25px" }}
@@ -29,7 +29,7 @@ export default function Header(props: { filters: linkType[] }) {
         </p>
       </div>
       {/* Desktop View */}
-      <div className="hidden md:block fadeIn">
+      <div className="hidden md:block">
         <div className="flex flex-row gap-12 text-xl justify-end text-[#c5c6c7]">
           {props.filters.map((filter) => (
             <Link
