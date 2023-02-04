@@ -1,8 +1,12 @@
 import "./App.css";
-import AppRouter from "./router/AppRouter";
 
 function App() {
-  return <AppRouter />;
+  window.location.href = "https://pranshuaggarwal.me/";
+  return (
+    <div className="flex justify-center items-center h-screen w-screen font-medium text-2xl">
+      Pranshu Aggarwal
+    </div>
+  );
 }
 
 export default App;
