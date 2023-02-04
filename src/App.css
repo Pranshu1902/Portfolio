@@ -37,13 +37,6 @@
   }
 }
 
-/* Fade in animation */
-.fadeIn {
-  animation: fadeIn ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: backwards;
-}
-
 @keyframes fadeIn {
   0% {
     padding-bottom: 10%;
